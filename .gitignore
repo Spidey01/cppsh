@@ -1,3 +1,5 @@
+.*.?wp
+*~
 cppsh
 *.make
 Makefile
