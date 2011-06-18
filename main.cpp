@@ -1,18 +1,16 @@
 
 #include <cstdlib>
-
 #include <iostream>
-#include <string>
+
+#include "CppShell.hpp"
 
 int
 main(int argc, char *argv[])
 {
-    std::string input;
+    CppShell cppsh(std::cin);
 
-    std::cout << "$ ";
-    while (std::getline(std::cin, input)) {
-        std::cout << "> '" << input << "'" << std::endl;
-        std::cout << "$ ";
+    while (cppsh.read()) {
+        cppsh.print();
     }
 
     std::exit(EXIT_SUCCESS);
