@@ -1,0 +1,4 @@
+cppsh
+*.make
+Makefile
+obj/*
