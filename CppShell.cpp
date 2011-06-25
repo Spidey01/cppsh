@@ -1,9 +1,7 @@
 
-#include <iostream>
-
 #include "CppShell.hpp"
 
-CppShell::CppShell( std::istream &input )
+CppShell::CppShell( istream &input )
 {
     cmdsin = &input;
 }
@@ -15,7 +13,7 @@ CppShell::read()
 }
 
 bool
-CppShell::read(std::istream &input)
+CppShell::read(istream &input)
 {
     prompt();
     getline(input, cmdline);
@@ -27,14 +25,14 @@ CppShell::read(std::istream &input)
 int
 CppShell::print()
 {
-    std::cout << "> '" << cmdline << "'" << std::endl;
+    cout << "> '" << cmdline << "'" << endl;
     return cmdline.length();
 }
 
 void
 CppShell::prompt()
 {
-    std::cout << "$ ";
+    cout << "$ ";
 }
 
 int
@@ -44,7 +42,7 @@ CppShell::eval()
 }
 
 int
-CppShell::eval(const std::string &code)
+CppShell::eval(const string &code)
 {
     print();
 }
