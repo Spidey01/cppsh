@@ -1,3 +1,5 @@
+#ifndef CPPSH_CPPSHELL_HPP
+#define CPPSH_CPPSHELL_HPP
 
 #include <istream>
 #include <string>
@@ -19,4 +21,6 @@ class CppShell {
     std::string cmdline;
     CommandHistory history;
 };
+
+#endif
 
