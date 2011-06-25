@@ -19,6 +19,8 @@ CppShell::read(std::istream &input)
 {
     prompt();
     getline(input, cmdline);
+    if (!cmdline.empty())
+        history.add(cmdline);
     return input.good();
 }
 
@@ -33,5 +35,17 @@ void
 CppShell::prompt()
 {
     std::cout << "$ ";
+}
+
+int
+CppShell::eval()
+{
+    eval(cmdline);
+}
+
+int
+CppShell::eval(const std::string &code)
+{
+    print();
 }
 
